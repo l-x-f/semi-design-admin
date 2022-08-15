@@ -1,0 +1,28 @@
+@import './reset';
+@import './variables.module.scss';
+@import './margin.scss';
+@import '@semi-bot/semi-theme-volcano_engine/semi.min.css';
+
+#nprogress .bar {
+  background: var(--semi-color-primary);
+}
+
+body {
+  background: $base-background-color;
+  font-family: 'PingFang SC', Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial,
+    sans-serif;
+  font-size: $base-font-size;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  overflow: hidden;
+  text-rendering: optimizelegibility;
+}
+
+.semi-navigation-sub {
+  margin-left: 20px;
+}
+
+.semi-table-tbody > .semi-table-row > .semi-table-row-cell {
+  padding: 8px;
+}

@@ -1,0 +1,39 @@
+.card-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  .card {
+    border-top: 3px solid #4e70f3;
+    height: 147px;
+    width: 220px;
+
+    &:hover {
+      box-shadow: 2px 2px 10px #ccc;
+    }
+  }
+  :global(.semi-card-body) {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 14px;
+    color: #888a95;
+    font-weight: 600;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+  }
+  .content {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 18px;
+    margin-bottom: 10px;
+  }
+  .footer {
+    font-size: 14px;
+    color: #37383c;
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,23 @@
+@import '@/styles/mixin.scss';
+
+.layout {
+  height: 100vh;
+  width: 100%;
+  .layout-layout {
+    padding: 0;
+    margin: 0 auto;
+
+    @include content-width;
+  }
+  .layout-content {
+    padding: 16px;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .layout-main {
+    overflow: auto;
+    height: calc(100vh - 60px - 60px - 24px - 24px - 16px);
+    border-radius: 8px;
+  }
+}

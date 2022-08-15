@@ -1,0 +1,21 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+yarn-error.log
+package-lock.json
+coverage
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+stats.html
+
+# 忽略配置文件 此文件会自动生成
+public/baseUrl.js
+dist.zip

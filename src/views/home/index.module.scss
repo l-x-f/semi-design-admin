@@ -1,0 +1,27 @@
+.home {
+  .notify {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+    .color {
+      color: #1e9fff;
+    }
+  }
+  .chart {
+    margin-top: 20px;
+    .tab {
+      width: 100%;
+      text-align: right;
+      margin-bottom: 10px;
+      .tab-item {
+        border-radius: 0;
+      }
+      .tab-item + .tab-item {
+        border-left: 1px solid #ccc;
+      }
+    }
+  }
+}

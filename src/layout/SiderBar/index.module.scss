@@ -1,0 +1,16 @@
+.layout-sider {
+  background-color: var(--semi-color-bg-1);
+  height: calc(100vh - 60px);
+
+  :global(.semi-navigation-header) {
+    padding: 0 !important;
+  }
+  .layout-sider-header {
+    width: 100%;
+
+    .layout-sider-header-button {
+      width: 100%;
+      margin: 24px 0 12px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+// 文字大小
+$base-font-size: 14px; // 基础字体大小
+$small-font-size: 13px; // 小字体大小
+$big-font-size: 16px; // 大字体大小
+
+// 主题色
+$primary-color: #1756f6;
+$primary-color-hover: #356cf5;
+$default-color-hover: #d9e1f6;
+$primary-text-color: #222;
+$base-background-color: #f3f4f7; // 内容区默认背景色
+$layout-bg-color: #151c41; // 布局背景颜色 #545c64
+
+// 布局
+$layout-max-width: 1920px; // 内容区最大宽度
+$layout-width: 1200px; // 内容区最小宽度
+$layout-min-width: 768px; // 内容区最小宽度
+$layout-header-height: 50px; // 头部高度
+$layout-gutter: 24px; // 头部及内容两边间距
+$layout-footer-height: 60px; // 底部高度
+$layout-tagview-height: 34px; // tagview高度
+$layout-breadcrumb-height: 60px; // 面包屑高度
+$layout-header-bg-color: #151c41; // 头部背景色
+
+// 侧边栏
+$sidebar-menu-text-color: #c0c1c7; // 侧边栏菜单按钮文字样色
+$sidebar-menu-active-text-color: #fefeff; // 侧边栏菜单按钮文字激活样色
+$sidebar-menu-active-bg-color: #111634; // 侧边栏菜单背景颜色
+$sidebar-menu-bg-color: $layout-bg-color; // 侧边栏菜单背景颜色
+$sidebar-width: 180px; // 侧边栏宽度
+$sidebar-width-en: 220px; // 侧边栏宽度-英文状态
+$sidebar-min-width: 80px; // 侧边栏最小宽度
+
+$image-pane-width: 340px;
+
+// 导出css变量供js模块使用
+:export {
+  FOOTER_HEIGHT: $layout-footer-height;
+  HEADER_HEIGHT: $layout-header-height;
+  LAYOUT_GUTTER: $layout-gutter;
+  MENU_ACTIVE_TEXT_COLOR: $sidebar-menu-active-text-color;
+  MENU_BG_COLOR: $sidebar-menu-bg-color;
+  MENU_TEXT_COLOR: $sidebar-menu-text-color;
+  PRIMARY_TEXT_COLOR: $primary-text-color;
+  SIDEBAR_MIN_WIDTH: $sidebar-min-width;
+  SIDEBAR_WIDTH: $sidebar-width;
+  SIDEBAR_WIDTH_EN: $sidebar-width-en;
+  SMALL_FONT_SIZE: $small-font-size;
+}

@@ -1,0 +1,14 @@
+@import '@/styles/mixin.scss';
+.header {
+  background-color: var(--semi-color-bg-1);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: $layout-min-width;
+  .nav {
+    padding: 0;
+
+    @include content-width;
+  }
+}
