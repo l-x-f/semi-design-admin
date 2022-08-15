@@ -10,7 +10,7 @@ const Loading: FC = () => (
       textAlign: 'center'
     }}
   >
-    <Spin style={{ width: '100%' }} indicator={<IconLoading />} tip="加载中..." />
+    <Spin style={{ width: '100%', height: 120 }} indicator={<IconLoading />} tip="加载中..." />
   </div>
 )
 

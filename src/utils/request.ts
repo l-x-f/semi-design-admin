@@ -1,14 +1,16 @@
 import type { AxiosResponse, AxiosRequestConfig, AxiosRequestHeaders } from 'axios'
 import axios from 'axios'
 import { Toast } from '@douyinfe/semi-ui'
+import { atomKey } from '@/store/atom'
 
-const mock = true
 const Message = (message: string) => Toast.error(message)
-const baseURL = import.meta.env.VITE_API_BASE_URL
+const baseURL = import.meta.env.VITE_APP_BASE_API
+console.log(baseURL, 'baseURL')
+
 // 创建 axios 实例
 const request = axios.create({
   // API 请求的默认前缀
-  baseURL: mock ? '/' : baseURL,
+  baseURL: baseURL,
   timeout: 10 * 1000 // 请求超时时间
 })
 
@@ -30,13 +32,12 @@ const errorHandler = (error: { message: string }) => {
 
 // 请求拦截器
 request.interceptors.request.use((config: AxiosRequestConfig<IResponse>) => {
-  const { token } = {} as any
+  const { token } = JSON.parse(localStorage.getItem(atomKey) || '')
   const headers: AxiosRequestHeaders = { ...config.headers }
   // 如果 token 存在
   if (token) {
-    headers.token = token.value
+    headers.token = token
   }
-
   return { ...config, headers }
 }, errorHandler)
 

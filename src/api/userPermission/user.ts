@@ -1,4 +1,4 @@
-import { AxiosResponse } from 'axios'
+import type { AxiosResponse } from 'axios'
 import md5 from 'js-md5'
 import request from '@/utils/request'
 

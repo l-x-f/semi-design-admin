@@ -1,15 +1,13 @@
-import { AxiosResponse } from 'axios'
+import type { AxiosResponse } from 'axios'
 import md5 from 'js-md5'
 import request from '@/utils/request'
-import { IUserInfo } from '/types/store'
-import { LoginFrom } from '@/views/login/type'
 
 /**
  *  登录
  * @param data
  * @returns
  */
-export function login(data: LoginFrom): Promise<AxiosResponse<IUserInfo>> {
+export function login(data: RecordType): Promise<AxiosResponse<any>> {
   return request({
     url: '/login',
     method: 'post',

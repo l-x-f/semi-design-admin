@@ -16,7 +16,7 @@ const Login = () => {
 
   const initValues = {
     account: 'admin',
-    password: 'admin@admin@admin'
+    password: 'admin.lixiaofei.site'
   }
 
   const handleSubmit = (values: Record<string, any>) => {
