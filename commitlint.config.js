@@ -16,7 +16,8 @@ module.exports = {
         'refactor',
         'perf',
         'chore',
-        'revert'
+        'revert',
+        'release'
       ] // 主题含义见 /.cz-config.js
     ],
     'subject-full-stop': [0, 'never'], // 主题句号

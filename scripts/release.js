@@ -9,13 +9,13 @@ const { version: currentVersion } = require('../package.json')
 
 //  版本列表
 const versionIncrements = [
-  'patch',
-  'minor',
-  'major',
-  'prepatch',
-  'preminor',
-  'premajor',
-  'prerelease'
+  'patch（补丁）',
+  'minor（次版本）',
+  'major（主版本）',
+  'prepatch（预构建补丁）',
+  'preminor（预构建次版本）',
+  'premajor（预构建主版本）',
+  'prerelease（预构建发布版本）'
 ]
 
 // 步骤打印
@@ -39,6 +39,11 @@ function updatePackage(version) {
   step(`updated package.json version to ${version}\n`)
 }
 
+function getInc(value) {
+  const r = /(\w+)/g
+  return r.exec(value)[0]
+}
+
 /**
  * 提交 打标签 推送到远程仓库
  * @param {string} version
@@ -47,7 +52,8 @@ async function publish(version) {
   try {
     await run('git', ['add', '-A'])
     await run('git', ['tag', '-a', version, '-m', `Release v${version}`])
-    await run('git', ['commit', '-m', `release: v${version}`])
+    await run('yarn', ['commit', '-m', `release: v${version}`])
+    await run('git', ['pull'])
     await run('git', ['push', '--tags'])
     await run('git', ['push'])
     step(`push version to ${version}\n`)
@@ -64,7 +70,7 @@ async function main() {
     type: 'select',
     name: 'release',
     message: 'Select release type',
-    choices: versionIncrements.map(i => `${i} (${inc(i)})`).concat(['custom'])
+    choices: versionIncrements.map(i => `${i} (${inc(getInc(i))})`).concat(['custom（自定义版本）'])
   })
 
   if (release === 'custom') {
